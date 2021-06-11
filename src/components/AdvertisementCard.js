@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Card, Container, Icon, Label } from "semantic-ui-react";
+import { Button, Card, Label } from "semantic-ui-react";
 import AdvertisementsService from "../services/AdvertisementsService";
 
 const AdvertisementCard = () => {
@@ -8,14 +8,14 @@ const AdvertisementCard = () => {
     let advertisementsService = new AdvertisementsService();
     advertisementsService
       .getAdvertisements()
-      .then((result) => setAdvertisement(result.data.data));
-  });
+      .then((result) => setAdvertisement(result?.data?.data));
+  }, []);
 
   return (
     <div className="advertisementCard">
-      <Card.Group itemsPerRow={3}>
+      <Card.Group itemsPerRow={2}>
         {advertisements.map((advertisement) => (
-          <Card className="jobCard">
+          <Card fluid className="jobCard">
             <Card.Content>
               <Label as="a" color="red" attached="top right">
                 {new Date(advertisement.deadline).toLocaleDateString()}

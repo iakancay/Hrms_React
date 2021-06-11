@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 import { Icon, Menu, Sidebar } from "semantic-ui-react";
 
 const SideBar = () => {
@@ -18,14 +19,18 @@ const SideBar = () => {
         <Icon name="user" />
         Profile
       </Menu.Item>
-      <Menu.Item as="a">
-        <Icon name="industry" />
-        Companies
-      </Menu.Item>
-      <Menu.Item as="a">
-        <Icon name="bullhorn" />
-        Job Advertisements
-      </Menu.Item>
+      <Link to={"/companies"}>
+        <Menu.Item>
+          <Icon name="industry" />
+          Companies
+        </Menu.Item>
+      </Link>
+      <Link to={"/advertisements"}>
+        <Menu.Item>
+          <Icon name="bullhorn" />
+          Job Advertisements
+        </Menu.Item>
+      </Link>
     </Sidebar>
   );
 };
