@@ -8,7 +8,7 @@
 }
 
 .jobCard {
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .jobCard:hover {

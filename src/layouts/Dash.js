@@ -1,5 +1,6 @@
 import React from "react";
 import { Route } from "react-router";
+import NewAdForm from "../components/NewAdForm";
 import AdvertisementList from "../pages/AdvertisementList";
 
 import CompanyList from "../pages/CompanyList";
@@ -10,6 +11,7 @@ const Dash = () => {
       <Route exact path="/" component={AdvertisementList} />
       <Route exact path="/advertisements" component={AdvertisementList} />
       <Route path="/companies" component={CompanyList} />
+      <Route exact path="/new-ad" component={NewAdForm} />
     </div>
   );
 };

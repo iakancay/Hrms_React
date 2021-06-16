@@ -13,7 +13,7 @@ export default function CompanyList() {
   }, []);
   return (
     <div>
-      <Header style={{ textAlign: "center" }} as="h1">
+      <Header style={{ textAlign: "center", marginTop: "20px" }} as="h1">
         COMPANIES
       </Header>
       <Card.Group centered>

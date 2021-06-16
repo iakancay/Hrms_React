@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Icon, Menu, Sidebar } from "semantic-ui-react";
 
 const SideBar = () => {
@@ -15,18 +15,18 @@ const SideBar = () => {
       animation="overlay"
       style={{ top: 50, height: "100%" }}
     >
-      <Menu.Item as="a">
+      <Menu.Item style={{ border: "none", cursor: "pointer" }}>
         <Icon name="user" />
         Profile
       </Menu.Item>
       <Link to={"/companies"}>
-        <Menu.Item>
+        <Menu.Item style={{ cursor: "pointer" }}>
           <Icon name="industry" />
           Companies
         </Menu.Item>
       </Link>
       <Link to={"/advertisements"}>
-        <Menu.Item>
+        <Menu.Item style={{ cursor: "pointer" }}>
           <Icon name="bullhorn" />
           Job Advertisements
         </Menu.Item>
